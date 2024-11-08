@@ -1,0 +1,42 @@
+body{
+  background: #92e6ff; /*Aquí le decimos de qué color queremos el fondo, en este caso un azul claro*/
+  color: #fffbf4; /*Este es el color del texto, en este caso un color blanco claro*/
+  font-family: sans-serif; /*Aquí especificamos que la fuente de texto será de tipo sans-serif*/
+  text-align: center; /*Este comando alinea el texto en el centro*/
+}
+
+#tablero {
+  margin-top: 50px; /*Añade un margen superior de 50 píxeles*/
+  background: url(http://img.freepik.com/free-photo/wooden-texture_1160-686.jpg?size=338&amp;ext=jpg); /*Establece una imagen de fondo para el elemento*/
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6); /*Añade una sombra al cuadro del tablero: 10px hacia abajo, con un difuso de 10px y un color negro con opacidad .6*/
+  border-radius: 3px; /*Redondea los bordes del elemento 'tablero' con un radio de 3 píxeles*/
+  border-collapse: collapse; /*Hace que las fronteras de las celdas de una tabla colapsen y se fusionen en una sola línea*/
+  height: 400px; /*Establece la altura del tablero en 400 píxeles*/
+  width: 400px; /*Establece el ancho del tablero en 400 píxeles*/
+  position: absolute; /*Posiciona el tablero de forma absoluta dentro de su contenedor*/
+  top: 30px; /*Establece una distancia de 30 píxeles desde la parte superior del contenedor padre*/
+  right: 0; /*Establece que el borde derecho del tablero estará alineado con el borde derecho del contenedor padre*/
+  bottom: 0; /*Establece que el borde inferior del tablero estará alineado con el borde inferior del contenedor padre*/
+  left: 0; /*Establece que el borde izquierdo del tablero estará alineado con el borde izquierdo del contenedor padre*/
+  margin: auto; /*Usado en combinación con las propiedades 'top', 'bottom', 'left', y 'right' para centrar el tablero horizontal y verticalmente*/
+}
+
+#tablero div div {
+  color: #66415e; /*Establece el color del texto dentro de los divs internos del tablero*/
+  float: left; /*Hace que los elementos div dentro del tablero floten a la izquierda*/
+  font-size: 36px; /*Establece el tamaño de la fuente a 36 píxeles*/
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, .6); /*Aplica una sombra al texto de color blanco con opacidad .6, desplazada 1px hacia la derecha y 1px hacia abajo*/
+  width: 50px; /*Establece un ancho de 50 píxeles para cada div dentro del tablero*/
+  height: 50px; /*Establece una altura de 50 píxeles para cada div dentro del tablero*/
+}
+
+
+#tablero div:nth-child(odd) div:nth-child(even), /*Selecciona los divs dentro del tablero donde el padre es un div impar y el hijo es un div par*/
+#tablero div:nth-child(even) div:nth-child(odd) { /*Selecciona los divs dentro del tablero donde el padre es un div par y el hijo es un div impar*/
+  background: rgba(0, 0, 0, .4); /*Aplica un color de fondo negro con opacidad 0.4 a esos divs seleccionados*/
+}
+
+#tablero div:nth-child(n+7) div { /*Selecciona todos los divs dentro de 'tablero' cuyo padre sea un div número 7*/
+  color: #ded3ff; /*Establece el color del texto*/
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .6); /*Aplica una sombra al texto, de color negro con opacidad .6, desplazada 1px a la derecha y 1px hacia abajo*/
+}
